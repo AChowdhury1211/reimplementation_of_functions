@@ -9,8 +9,16 @@ def reduce_modified(function, iterable):
 def add(a,b):
     return a+b
 
+def reduce_inelegant_method(function, seq):
+    val = seq[0]
+    for i in seq[1:]:
+        val = function(val, i)
+    return val
+
 lst = [4,3,2,-2,0,1.9]
 
-result = reduce_modified(add, lst)
+result1 = reduce_modified(add, lst)
+result2 = reduce_inelegant_method(add, lst)
 
-print(result)
+print(result1)
+print(result2)
