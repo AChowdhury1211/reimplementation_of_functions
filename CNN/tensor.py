@@ -27,3 +27,5 @@ def change_dim(in_filter , out_filter, x: torch.tensor):
 x = torch.randn(1,3,4,3)
 res = change_dim(3, 1, x)
 print(res)
+
+# how a tensor is formed
